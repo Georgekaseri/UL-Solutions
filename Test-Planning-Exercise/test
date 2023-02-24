@@ -1,0 +1,187 @@
+Test name: Creating a new task list
+
+### Steps:
+
+Open the application
+Click on the "Create List" button
+Enter a unique name for the list
+Click on the "Save" button
+Expected Outcome: A new task list with the given name is created and displayed in the application's interface.
+Test name: Renaming a task list
+
+### Steps:
+
+Open the application
+Select an existing task list
+Click on the "Rename" button
+Change the name of the list to a new unique name
+Click on the "Save" button
+Expected Outcome: The selected task list is renamed with the new name and the change is reflected in the application's interface.
+Test name: Deleting a task list
+
+### Steps:
+
+Open the application
+Select an existing task list
+Click on the "Delete" button
+Confirm the deletion by clicking on the "Yes" button in the confirmation dialog box
+Expected Outcome: The selected task list is deleted and no longer displayed in the application's interface.
+Test name: Creating a new task item with all mandatory fields
+
+### Steps:
+
+Open the application
+Select an existing task list
+Click on the "New Task" button
+Enter a description for the task
+Enter a valid email address for the task
+Click on the "Save" button
+Expected Outcome: A new task item is created with the given description and email address, a unique ID is automatically generated, the default priority value is 3, and the "Complete" flag is set to false.
+Test name: Creating a new task item with a valid due date/time
+
+### Steps:
+
+Open the application
+Select an existing task list
+Click on the "New Task" button
+Enter a description for the task
+Enter a valid email address for the task
+Enter a valid due date/time for the task
+Click on the "Save" button
+Expected Outcome: A new task item is created with the given description, email address, and due date/time, a unique ID is automatically generated, the default priority value is 3, and the "Complete" flag is set to false.
+Test name: Creating a new task item with an invalid email address
+
+### ### Steps:
+
+Open the application
+Select an existing task list
+Click on the "New Task" button
+Enter a description for the task
+Enter an invalid email address for the task
+Click on the "Save" button
+Expected Outcome: An error message is displayed indicating that the email address is invalid and the task item is not created.
+Test name: Editing an existing task item
+
+### ### Steps:
+
+Open the application
+Select an existing task list
+Select an existing task item
+Click on the "Edit" button
+Modify the description, priority, due date/time, or email address of the task item
+Click on the "Save" button
+Expected Outcome: The selected task item is updated with the new values and the changes are reflected in the application's interface.
+Test name: Deleting an existing task item
+
+### ### Steps:
+
+Open the application
+Select an existing task list
+Select an existing task item
+Click on the "Delete" button
+Confirm the deletion by clicking on the "Yes" button in the confirmation dialog box
+Expected Outcome: The selected task item is deleted and no longer displayed in the application's interface.
+
+### Negartive scenarios
+
+Test name: Task list names must be unique
+
+### ### Steps:
+
+Open the application
+Click on the "Create List" button
+Enter a name for the list that is already used by another list
+Click on the "Save" button
+Expected Outcome: An error message is displayed indicating that the list name must be unique and the list is not created.
+Test name: Task item descriptions cannot be blank
+
+### ### Steps:
+
+Open the application
+Select an existing task list
+Click on the "New Task" button
+Leave the description field blank
+Enter a valid email address for the task
+Click on the "Save" button
+Expected Outcome: An error message is displayed indicating that the description field is mandatory and the task item is not created.
+Test name: Task item priority must be between 1 and 5
+
+### ### Steps:
+
+Open the application
+Select an existing task list
+Click on the "New Task" button
+Enter a description for the task
+Enter a priority value less than 1 or greater than 5
+Enter a valid email address for the task
+Click on the "Save" button
+Expected Outcome: An error message is displayed indicating that the priority value must be between 1 and 5 and the task item is not created.
+Test name: Task item with a due date must be completed before or on the due date
+
+### ### Steps:
+
+Open the application
+Select an existing task list
+Click on the "New Task" button
+Enter a description for the task
+Enter a valid email address for the task
+Enter a due date/time that is in the future
+Click on the "Save" button
+Mark the task item as complete after the due date/time has passed
+Expected Outcome: An error message is displayed indicating that the task item is overdue and the complete flag cannot be set.
+Test name: Deleting a task list deletes all associated task items
+
+### ### Steps:
+
+Open the application
+Select an existing task list
+Click on the "New Task" button
+Enter a description for the task
+Enter a valid email address for the task
+Click on the "Save" button
+Delete the task list
+Expected Outcome: All task items associated with the deleted task list are also deleted and no longer displayed in the application's interface.
+
+#### To complete the example
+
+## johnsmith@hotmail.com Accepted
+
+### Steps:
+
+Enter the email address "johnsmith@hotmail.com" in the email address field of the new task item form
+Enter a description for the task item
+Click on the "Save" button
+Expected Outcome:
+The application should accept the email address "johnsmith@hotmail.com" and create a new task item with the entered description, the default priority of 3, and the complete flag set to false. The task item should be displayed in the task list with the email address and other details visible.
+
+## A Rejected
+
+### ### Steps:
+
+Enter the email address "A" in the email address field of the new task item form
+Enter a description for the task item
+Click on the "Save" button
+Expected Outcome:
+The application should reject the email address "A" and display an error message or warning to the user indicating that the email address is invalid. The task item should not be created and should not be displayed in the task list.
+
+## 788998987 Rejected
+
+### ### Steps:
+
+Enter the email address "788998987" in the email address field of the new task item form
+Enter a description for the task item
+Click on the "Save" button
+Expected Outcome:
+The application should reject the email address "788998987" and display an error message or warning to the user indicating that the email address is invalid. The task item should not be created and should not be displayed in the task list.
+
+## john@smith Rejected
+
+### ### Steps:
+
+Enter the email address "john@smith" in the email address field of the new task item form
+Enter a description for the task item
+Click on the "Save" button
+Expected Outcome:
+The application should reject the email address "john@smith" and display an error message or warning to the user indicating that the email address is invalid. The task item should not be created and should not be displayed in the task list.
+
+### Input is &lt;blank&gt; Outcome is Rejected
